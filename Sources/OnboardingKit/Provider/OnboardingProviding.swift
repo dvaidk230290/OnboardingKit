@@ -7,12 +7,12 @@
 import Foundation
 
 public protocol OnboardingProviding: AnyObject, Observable {
-    var isCompleted: Bool { get set }
-    var isShowingOnboarding: Bool { get }
-    var configuration: OnboardingConfiguration { get }
+    public var isCompleted: Bool { get set }
+    public var isShowingOnboarding: Bool { get }
+    public var configuration: OnboardingConfiguration { get }
 
-    func completeOnboarding()
-    func resetOnboarding()
+    public func completeOnboarding()
+    public func resetOnboarding()
 }
 
 extension OnboardingProviding {
