@@ -22,4 +22,8 @@ extension OnboardingProviding {
     func completeOnboarding() {
         isCompleted = true
     }
+    
+    func resetOnboarding() {
+        isCompleted = false
+    }
 }
