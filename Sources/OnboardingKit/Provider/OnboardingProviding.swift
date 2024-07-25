@@ -12,6 +12,7 @@ protocol OnboardingProviding: AnyObject, Observable {
     var configuration: OnboardingConfiguration { get }
 
     func completeOnboarding()
+    func resetOnboarding()
 }
 
 extension OnboardingProviding {
@@ -23,7 +24,7 @@ extension OnboardingProviding {
         isCompleted = true
     }
     
-    public func resetOnboarding() {
+    func resetOnboarding() {
         isCompleted = false
     }
 }
