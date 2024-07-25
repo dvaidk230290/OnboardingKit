@@ -6,7 +6,7 @@
 
 import Foundation
 
-protocol OnboardingProviding: AnyObject, Observable {
+public protocol OnboardingProviding: AnyObject, Observable {
     var isCompleted: Bool { get set }
     var isShowingOnboarding: Bool { get }
     var configuration: OnboardingConfiguration { get }
