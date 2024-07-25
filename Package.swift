@@ -6,7 +6,6 @@ import PackageDescription
 let package = Package(
     name: "OnboardingKit",
     platforms: [
-        .macOS(.v14),
         .iOS(.v17)
     ],
     products: [
