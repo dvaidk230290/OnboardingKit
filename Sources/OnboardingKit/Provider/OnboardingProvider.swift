@@ -10,9 +10,9 @@ import Foundation
 public final class OnboardingProvider: OnboardingProviding {
     private static let onboardingKey = "isOnboardingCompleted"
     private let userDefaults: UserDefaults
-    let configuration: OnboardingConfiguration
+    public let configuration: OnboardingConfiguration
 
-    var isCompleted: Bool {
+    public var isCompleted: Bool {
         get {
             access(keyPath: \.isCompleted)
             return userDefaults.bool(forKey: Self.onboardingKey)
