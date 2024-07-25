@@ -20,7 +20,6 @@
 ## Requirements
 
 - **iOS**: 17.0 or later.
-- **macOS**: 14.0 or later.
 
 <br>
 
@@ -31,7 +30,7 @@ You can install `OnboardingKit` using the Swift Package Manager.
 1. In Xcode, select "File" > "Add Package Dependencies".
 2. Copy & paste the following into the "Search or Enter Package URL" search bar.
 ```
-https://github.com/JamesSedlacek/OnboardingKit.git
+https://github.com/dvaidk230290/OnboardingKit.git
 ```
 4. Xcode will fetch the repository & the "OnboardingKit" library will be added to your project.
 
