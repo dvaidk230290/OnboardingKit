@@ -15,7 +15,8 @@ public struct OnboardingConfiguration {
     public init(privacyUrlString: String,
                 accentColor: Color = .blue,
                 features: [FeatureInfo], 
-                titleSectionAlignment: HorizontalAlignment = .leading) {
+                titleSectionAlignment: HorizontalAlignment = .leading,
+                newView: (any View)? = nil) {
         self.privacyUrlString = privacyUrlString
         self.accentColor = accentColor
         self.features = features
