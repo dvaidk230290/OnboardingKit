@@ -12,7 +12,7 @@ struct BottomSection: View {
     private var onboardingProvider
     @State private var isDataPrivacyPresented = false
     @State private var isAnimating: Bool = false
-
+    @State private var navigateToNextView: Bool = false
     var body: some View {
         VStack(alignment: .center, spacing: .zero) {
             Image(.dataPrivacy)
@@ -35,7 +35,14 @@ struct BottomSection: View {
             }
 
             Button("Continue") {
-                onboardingProvider.completeOnboarding()
+                if (onboardingProvider.configuration.newView != nil ){
+                    withAnimation(.easeInOut(duration: 0.8)){
+                        navigateToNextView = true
+                    }
+                }
+                else{
+                    onboardingProvider.completeOnboarding()
+                }
             }
             .buttonStyle(PrimaryButtonStyle())
         }
@@ -50,6 +57,15 @@ struct BottomSection: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 0.8).delay(2.2)) {
                 isAnimating = true
+            }
+        }
+        .fullScreenCover(isPresented: $navigateToNextView) {
+            if let view = onboardingProvider.configuration.newView {
+                AnyView(view)
+                    .transition(.slide)
+            }
+            else{
+                Text("Didn't Recieve a View")
             }
         }
     }
