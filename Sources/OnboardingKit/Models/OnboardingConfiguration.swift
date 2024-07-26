@@ -21,7 +21,7 @@ public struct OnboardingConfiguration {
         self.accentColor = accentColor
         self.features = features
         self.titleSectionAlignment = titleSectionAlignment
-        self.newView = nil
+        self.newView = newView
     }
 }
 
