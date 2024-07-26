@@ -35,6 +35,7 @@ struct BottomSection: View {
             }
 
             Button("Continue") {
+                print(onboardingProvider.configuration.newView)
                 if (onboardingProvider.configuration.newView != nil ){
                     withAnimation(.easeInOut(duration: 0.8)){
                         navigateToNextView = true
